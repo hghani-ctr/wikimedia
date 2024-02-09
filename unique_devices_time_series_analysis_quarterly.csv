@@ -1,3 +1,4 @@
+month,wmf_region,country,current_metric_avg,previous_metric_avg,absolute_change,proportion_current_regional,formula_result_percentage_regional,proportion_current_global,formula_result_percentage_global
 Quarter,Northern & Western Europe,Jersey,75109.66666666667,76012.0,-902.3333333333285,0.018911222628390036,3.295938688626894e-06,0.004520250368079715,0.2945616888980165
 Quarter,Northern & Western Europe,Luxembourg,846159.3333333334,700327.0,145832.33333333337,0.21304724467454383,0.00600098114804486,0.050923565603460966,0.2603159798116226
 Quarter,Northern & Western Europe,Åland,22858.0,24388.0,-1530.0,0.005755220945902296,1.7007714143507357e-06,0.0013756402803931065,0.29688548245897645
