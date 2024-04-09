@@ -1,192 +1,23 @@
-month,wmf_region,total_active_editors
-2022-06,,2929
-2022-06,Central & Eastern Europe & Central Asia,11684
-2022-06,"East, Southeast Asia, & Pacific",14939
-2022-06,Latin America & Caribbean,5188
-2022-06,Middle East & North Africa,3194
-2022-06,North America,14082
-2022-06,Northern & Western Europe,26772
-2022-06,South Asia,4017
-2022-06,Sub-Saharan Africa,1309
-2022-07,,3065
-2022-07,Central & Eastern Europe & Central Asia,11871
-2022-07,"East, Southeast Asia, & Pacific",15150
-2022-07,Latin America & Caribbean,5557
-2022-07,Middle East & North Africa,3117
-2022-07,North America,14447
-2022-07,Northern & Western Europe,26431
-2022-07,South Asia,4034
-2022-07,Sub-Saharan Africa,1358
-2022-08,,2971
-2022-08,Central & Eastern Europe & Central Asia,11858
-2022-08,"East, Southeast Asia, & Pacific",15613
-2022-08,Latin America & Caribbean,5336
-2022-08,Middle East & North Africa,3107
-2022-08,North America,14368
-2022-08,Northern & Western Europe,26439
-2022-08,South Asia,4107
-2022-08,Sub-Saharan Africa,1493
-2022-09,,2879
-2022-09,Central & Eastern Europe & Central Asia,11332
-2022-09,"East, Southeast Asia, & Pacific",14785
-2022-09,Latin America & Caribbean,5050
-2022-09,Middle East & North Africa,2934
-2022-09,North America,14326
-2022-09,Northern & Western Europe,25902
-2022-09,South Asia,3992
-2022-09,Sub-Saharan Africa,1413
-2022-10,,2939
-2022-10,Central & Eastern Europe & Central Asia,11654
-2022-10,"East, Southeast Asia, & Pacific",15059
-2022-10,Latin America & Caribbean,5312
-2022-10,Middle East & North Africa,3115
-2022-10,North America,15247
-2022-10,Northern & Western Europe,27405
-2022-10,South Asia,4092
-2022-10,Sub-Saharan Africa,1438
-2022-11,,2841
-2022-11,Central & Eastern Europe & Central Asia,11804
-2022-11,"East, Southeast Asia, & Pacific",14641
-2022-11,Latin America & Caribbean,5121
-2022-11,Middle East & North Africa,2920
-2022-11,North America,15411
-2022-11,Northern & Western Europe,27190
-2022-11,South Asia,3774
-2022-11,Sub-Saharan Africa,1294
-2022-12,,2849
-2022-12,Central & Eastern Europe & Central Asia,12526
-2022-12,"East, Southeast Asia, & Pacific",14687
-2022-12,Latin America & Caribbean,5300
-2022-12,Middle East & North Africa,3208
-2022-12,North America,15122
-2022-12,Northern & Western Europe,26845
-2022-12,South Asia,4017
-2022-12,Sub-Saharan Africa,1293
-2023-01,,3137
-2023-01,Central & Eastern Europe & Central Asia,12933
-2023-01,"East, Southeast Asia, & Pacific",15233
-2023-01,Latin America & Caribbean,5782
-2023-01,Middle East & North Africa,3538
-2023-01,North America,15436
-2023-01,Northern & Western Europe,29140
-2023-01,South Asia,4172
-2023-01,Sub-Saharan Africa,1261
-2023-02,,2969
-2023-02,Central & Eastern Europe & Central Asia,12087
-2023-02,"East, Southeast Asia, & Pacific",14147
-2023-02,Latin America & Caribbean,5301
-2023-02,Middle East & North Africa,2970
-2023-02,North America,14513
-2023-02,Northern & Western Europe,26573
-2023-02,South Asia,3937
-2023-02,Sub-Saharan Africa,1461
-2023-03,,3050
-2023-03,Central & Eastern Europe & Central Asia,12426
-2023-03,"East, Southeast Asia, & Pacific",15093
-2023-03,Latin America & Caribbean,5465
-2023-03,Middle East & North Africa,3079
-2023-03,North America,15762
-2023-03,Northern & Western Europe,27999
-2023-03,South Asia,4450
-2023-03,Sub-Saharan Africa,1625
-2023-04,,2950
-2023-04,Central & Eastern Europe & Central Asia,12659
-2023-04,"East, Southeast Asia, & Pacific",14817
-2023-04,Latin America & Caribbean,5379
-2023-04,Middle East & North Africa,3075
-2023-04,North America,15431
-2023-04,Northern & Western Europe,27096
-2023-04,South Asia,4148
-2023-04,Sub-Saharan Africa,1522
-2023-05,,2818
-2023-05,Central & Eastern Europe & Central Asia,12423
-2023-05,"East, Southeast Asia, & Pacific",14977
-2023-05,Latin America & Caribbean,5378
-2023-05,Middle East & North Africa,3185
-2023-05,North America,15043
-2023-05,Northern & Western Europe,27988
-2023-05,South Asia,3915
-2023-05,Sub-Saharan Africa,1610
-2023-06,,2886
-2023-06,Central & Eastern Europe & Central Asia,11577
-2023-06,"East, Southeast Asia, & Pacific",14543
-2023-06,Latin America & Caribbean,5372
-2023-06,Middle East & North Africa,3393
-2023-06,North America,13933
-2023-06,Northern & Western Europe,26631
-2023-06,South Asia,3824
-2023-06,Sub-Saharan Africa,1670
-2023-07,,2984
-2023-07,Central & Eastern Europe & Central Asia,11463
-2023-07,"East, Southeast Asia, & Pacific",14539
-2023-07,Latin America & Caribbean,5440
-2023-07,Middle East & North Africa,3078
-2023-07,North America,14199
-2023-07,Northern & Western Europe,26856
-2023-07,South Asia,4062
-2023-07,Sub-Saharan Africa,1682
-2023-08,,3250
-2023-08,Central & Eastern Europe & Central Asia,11838
-2023-08,"East, Southeast Asia, & Pacific",14936
-2023-08,Latin America & Caribbean,5379
-2023-08,Middle East & North Africa,3077
-2023-08,North America,14335
-2023-08,Northern & Western Europe,27260
-2023-08,South Asia,4017
-2023-08,Sub-Saharan Africa,1561
-2023-09,,2959
-2023-09,Central & Eastern Europe & Central Asia,11434
-2023-09,"East, Southeast Asia, & Pacific",14347
-2023-09,Latin America & Caribbean,5095
-2023-09,Middle East & North Africa,3016
-2023-09,North America,14136
-2023-09,Northern & Western Europe,26022
-2023-09,South Asia,3879
-2023-09,Sub-Saharan Africa,1450
-2023-10,,3050
-2023-10,Central & Eastern Europe & Central Asia,11088
-2023-10,"East, Southeast Asia, & Pacific",14543
-2023-10,Latin America & Caribbean,5342
-2023-10,Middle East & North Africa,2833
-2023-10,North America,14900
-2023-10,Northern & Western Europe,26617
-2023-10,South Asia,3828
-2023-10,Sub-Saharan Africa,1424
-2023-10,UNCLASSED,1
-2023-11,,3029
-2023-11,Central & Eastern Europe & Central Asia,11492
-2023-11,"East, Southeast Asia, & Pacific",14051
-2023-11,Latin America & Caribbean,5331
-2023-11,Middle East & North Africa,2749
-2023-11,North America,15466
-2023-11,Northern & Western Europe,27219
-2023-11,South Asia,3581
-2023-11,Sub-Saharan Africa,1312
-2023-12,,2958
-2023-12,Central & Eastern Europe & Central Asia,11562
-2023-12,"East, Southeast Asia, & Pacific",14273
-2023-12,Latin America & Caribbean,5418
-2023-12,Middle East & North Africa,2911
-2023-12,North America,15107
-2023-12,Northern & Western Europe,26602
-2023-12,South Asia,3891
-2023-12,Sub-Saharan Africa,1426
-2024-01,,3253
-2024-01,Central & Eastern Europe & Central Asia,12461
-2024-01,"East, Southeast Asia, & Pacific",14890
-2024-01,Latin America & Caribbean,5643
-2024-01,Middle East & North Africa,3151
-2024-01,North America,15551
-2024-01,Northern & Western Europe,28493
-2024-01,South Asia,4042
-2024-01,Sub-Saharan Africa,1337
-2024-02,,3016
-2024-02,Central & Eastern Europe & Central Asia,11641
-2024-02,"East, Southeast Asia, & Pacific",13820
-2024-02,Latin America & Caribbean,5193
-2024-02,Middle East & North Africa,2850
-2024-02,North America,14931
-2024-02,Northern & Western Europe,27593
-2024-02,South Asia,3883
-2024-02,Sub-Saharan Africa,1145
-2024-02,UNCLASSED,0
+month,Central & Eastern Europe & Central Asia,"East, Southeast Asia, & Pacific",Latin America & Caribbean,Middle East & North Africa,North America,Northern & Western Europe,South Asia,Sub-Saharan Africa
+2022-06,11684,14939,5188,3194,14082,26772,4017,1309
+2022-07,11871,15150,5557,3117,14447,26431,4034,1358
+2022-08,11858,15613,5336,3107,14368,26439,4107,1493
+2022-09,11332,14785,5050,2934,14326,25902,3992,1413
+2022-10,11654,15059,5312,3115,15247,27405,4092,1438
+2022-11,11804,14641,5121,2920,15411,27190,3774,1294
+2022-12,12526,14687,5300,3208,15122,26845,4017,1293
+2023-01,12933,15233,5782,3538,15436,29140,4172,1261
+2023-02,12087,14147,5301,2970,14513,26573,3937,1461
+2023-03,12426,15093,5465,3079,15762,27999,4450,1625
+2023-04,12659,14817,5379,3075,15431,27096,4148,1522
+2023-05,12423,14977,5378,3185,15043,27988,3915,1610
+2023-06,11577,14543,5372,3393,13933,26631,3824,1670
+2023-07,11463,14539,5440,3078,14199,26856,4062,1682
+2023-08,11838,14936,5379,3077,14335,27260,4017,1561
+2023-09,11434,14347,5095,3016,14136,26022,3879,1450
+2023-10,11088,14543,5342,2833,14900,26617,3828,1424
+2023-11,11492,14051,5331,2749,15466,27219,3581,1312
+2023-12,11562,14273,5418,2911,15107,26602,3891,1426
+2024-01,12461,14890,5643,3151,15551,28493,4042,1337
+2024-02,11641,13820,5193,2850,14931,27593,3883,1145
+2024-03,12047,14568,5136,2987,15728,27815,3901,1469

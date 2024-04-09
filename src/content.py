@@ -5,45 +5,18 @@ from src.utils import load_metric_file
 from src.utils import subtract_year
 import wmfdata
 
-# Define a function to group gender categories
-def map_gender_category(category):
-    if category in ['male', 'cisgender male']:
-        return 'males'
-    elif category in ['female', 'cisgender female']:
-        return 'females'
-    else:
-        return 'gender_diverse'
+# Reshape the quality article data into standard metric table format
+def pivot_quality_data(df):
+    pivoted = (
+        df
+        .pivot(index='month', columns='category', values='quality_articles')
+        .rename(columns=lambda c: f"total_quality_articles_about_{c}")
+        # MetricSet.run_queries expects "month" to be a normal column which it then turns
+        # into an index
+        .reset_index()
+    )
     
-
-# Group by 'month' and 'category', then pivot the table
-def group_and_separate_categories(df):
-    grouped = df.groupby(['month', 'category'])['standard_quality_count_value'].sum().reset_index()
-    pivoted = grouped.pivot(index='month', columns='category', values='standard_quality_count_value')
-    pivoted.columns.name = None  # Remove the column name
     return pivoted
-
-# Clean up function to facilitate combine_first() with csv.
-def process_quality_data(df):
-    # Separate data based on 'content_gap'
-    df_gender = df[df['content_gap'] == 'gender'].copy()
-    df_geo = df[df['content_gap'] == 'geography_wmf_region'].copy()
-   
-    # Apply the gender mapping function to the 'category' column
-    df_gender['category'] = df_gender['category'].apply(map_gender_category)
-    
-    # Group and separate data for gender and geography
-    df_gender_grouped = group_and_separate_categories(df_gender)
-    df_geo_grouped = group_and_separate_categories(df_geo)
-    
-    # Concatenate the two dataframes along columns
-    combined_df = pd.concat([df_gender_grouped, df_geo_grouped], axis=1)
-
-    # Rename the columns with a prefix
-    rename_dict = {col: f"total_quality_articles_about_{col}" for col in combined_df.columns}
-    combined_df = combined_df.rename(columns=rename_dict)
- 
-    return combined_df
-
 
 # Calculate MoM and totals as well proportions
 def calculate_mom(df):

@@ -30,10 +30,6 @@ SELECT
     SUM(IF(region = 'South Asia', unique_devices, 0))
         AS south_asia_unique_devices,
     SUM(IF(region = 'Sub-Saharan Africa', unique_devices, 0))
-        AS subsaharan_africa_unique_devices,
-    SUM(IF(region = 'UNCLASSED', unique_devices, 0))
-        AS unclassed_unique_devices,
-    SUM(IF(region IS NULL, unique_devices, 0))
-        AS unknown_unique_devices
+        AS subsaharan_africa_unique_devices
 FROM country_ud
 GROUP BY month

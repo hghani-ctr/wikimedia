@@ -1,27 +1,29 @@
-SELECT 
-    content_gap,
-    category as category,
-    trunc(CAST(dt AS TIMESTAMP), 'MM') AS month,
-    SUM(standard_quality_count) AS standard_quality_count_value
-FROM
-    (
-    SELECT 
-        FROM_UNIXTIME(UNIX_TIMESTAMP(time_bucket, 'yyyy-MM'), 'yyyy-MM-dd') as dt,
-        category,
+WITH quality_articles_aggregated_genders AS (
+    SELECT
         content_gap,
-        metrics.article_created,
-        metrics.pageviews_sum,
-        metrics.pageviews_mean,
-        metrics.standard_quality,
-        metrics.standard_quality_count,
-        metrics.quality_score,
-        metrics.revision_count
+        CASE
+            -- Leave non-gender categories untouched
+            WHEN (content_gap != 'gender') THEN category
+            -- Aggregate gender categories
+            WHEN category IN ('male', 'cisgender male') THEN 'males'
+            WHEN category IN ('female', 'cisgender female') THEN 'females'
+            ELSE 'gender_diverse'
+        END AS category,
+        TO_DATE(time_bucket) AS month,
+        metrics.standard_quality_count AS quality_articles
     FROM content_gap_metrics.by_category_all_wikis
-    ) AS virtual_table
-WHERE 
-    dt >= TIMESTAMP '2022-10-25 19:03:11.000000'
-    AND (content_gap = 'gender' or content_gap = 'geography_wmf_region')
-GROUP BY category,content_gap,
-    trunc(CAST(dt AS TIMESTAMP), 'MM')
-ORDER BY "SUM(standard_quality_count)" DESC
-LIMIT 50000;
+    WHERE 
+        time_bucket = '{metrics_month}'
+        AND content_gap IN ('gender', 'geography_wmf_region')
+)
+SELECT 
+    category,
+    month,
+    SUM(quality_articles) AS quality_articles
+FROM quality_articles_aggregated_genders
+GROUP BY
+    category,
+    month
+ORDER BY
+    category,
+    month
