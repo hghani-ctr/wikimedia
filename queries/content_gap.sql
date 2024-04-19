@@ -1,20 +1,27 @@
-WITH quality_articles_aggregated_genders AS (
+WITH wikipedia_dbs AS (
+    SELECT database_code
+    FROM canonical_data.wikis
+    WHERE database_group = 'wikipedia'
+),
+quality_articles_aggregated_genders AS (
     SELECT
-        content_gap,
+        c.wiki_db,
+        c.content_gap,
         CASE
             -- Leave non-gender categories untouched
-            WHEN (content_gap != 'gender') THEN category
+            WHEN (c.content_gap != 'gender') THEN c.category
             -- Aggregate gender categories
-            WHEN category IN ('male', 'cisgender male') THEN 'males'
-            WHEN category IN ('female', 'cisgender female') THEN 'females'
+            WHEN c.category IN ('male', 'cisgender male') THEN 'males'
+            WHEN c.category IN ('female', 'cisgender female') THEN 'females'
             ELSE 'gender_diverse'
         END AS category,
-        TO_DATE(time_bucket) AS month,
-        metrics.standard_quality_count AS quality_articles
-    FROM content_gap_metrics.by_category_all_wikis
+        TO_DATE(c.time_bucket) AS month,
+        c.metrics.standard_quality_count AS quality_articles
+    FROM content_gap_metrics.by_category c
+    INNER JOIN wikipedia_dbs w ON c.wiki_db = w.database_code
     WHERE 
-        time_bucket = '{metrics_month}'
-        AND content_gap IN ('gender', 'geography_wmf_region')
+        c.time_bucket = '{metrics_month}'
+        AND c.content_gap IN ('gender', 'geography_wmf_region')
 )
 SELECT 
     category,
