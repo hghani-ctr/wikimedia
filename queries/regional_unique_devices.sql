@@ -1,11 +1,11 @@
 WITH country_ud AS (
     SELECT
         day AS month,
-        wmf_region AS region,
+        wikimedia_region AS region,
         uniques_estimate as unique_devices
     FROM wmf_readership.unique_devices_per_project_family_monthly ud
-    LEFT JOIN gdi.country_meta_data cmd 
-    ON ud.country_code = cmd.country_code_iso_2
+    LEFT JOIN canonical_data.countries cc
+    ON ud.country_code = cc.iso_code
     WHERE
         project_family = 'wikipedia'
         AND day = '{metrics_month_first_day}'
