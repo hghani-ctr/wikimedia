@@ -26,7 +26,7 @@ def calculate_mom(df):
         'Central & Eastern Europe & Central Asia', 'East, Southeast Asia, & Pacific',
         'Latin America & Caribbean', 'Middle East & North Africa',
         'North America', 'Northern & Western Europe', 'South Asia',
-        'Sub-Saharan Africa', 'UNCLASSED'
+        'Sub-Saharan Africa'
     ]
     
     # Create list of genders and regions using prefixes
@@ -34,7 +34,7 @@ def calculate_mom(df):
     all_regions = ['MoM_net_new_quality_articles_about_' + region for region in region_categories]
     
     underrepresented_gender = [name for name in all_genders if 'females' in name or 'gender_diverse' in name]
-    underrepresented_region = [name for name in all_regions if name.rsplit('_', 1)[-1] not in ['Central & Eastern Europe & Central Asia', 'North America', 'Northern & Western Europe', 'UNCLASSED']]
+    underrepresented_region = [name for name in all_regions if name.rsplit('_', 1)[-1] not in ['Central & Eastern Europe & Central Asia', 'North America', 'Northern & Western Europe']]
 
     # Compute the MoM difference only for the last value
     for column in df.columns:
