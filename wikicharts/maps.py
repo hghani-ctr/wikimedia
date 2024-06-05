@@ -5,7 +5,6 @@ import numpy as np
 from datetime import date
 import wmfdata as wmf
 
-from dateutil.relativedelta
 from shapely.ops import unary_union
 import warnings
 from .config import wmf_regions
