@@ -20,7 +20,7 @@ def simple_num_format(value, round_sigfigs=False, sig=2, perc=False, sign=False)
     else:
         order = math.floor(math.log10(abs(value)))
     if order >= 3:
-        formatting = '{:1.2f}'
+        formatting = '{:1.0f}'
     else:
         formatting = '{:1.0f}'
     

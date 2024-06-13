@@ -27,6 +27,7 @@ from .parameters import (
 )
 
 from .config import wmf_colors, style_parameters, wmf_regions
+from PIL import ImageFont
 
 
 class Wikichart():
@@ -138,7 +139,7 @@ class Wikichart():
         # Add gridlines    
         plt.grid(axis='y', zorder=-1, color=wmf_colors['black25'], linewidth=0.25, clip_on=False)
         # Format title
-        custom_title = f'{title} ({calendar.month_name[self.month_interest]})'
+        custom_title = f'{title}'
         plt.title(custom_title, font=style_parameters['font'], 
                   fontsize=style_parameters['title_font_size'], 
                   weight='bold', 
@@ -214,7 +215,11 @@ class Wikichart():
                 num_annotation = f"{last_y:.2f}"
     
         if legend_label:
-            dynamic_spacing = (len(legend_label)* 10) + 1
+            font_path = 'wikicharts/resources/fonts/Montserrat/static/Montserrat-Bold.ttf'
+            font = ImageFont.truetype(font_path, style_parameters['text_font_size'])
+            bbox = font.getbbox(legend_label)
+            labelsize = (bbox[2] - bbox[0], bbox[3] - bbox[1])
+            dynamic_spacing = labelsize[0] + 5
         else:
             dynamic_spacing = 10
             
@@ -314,8 +319,8 @@ class Wikichart():
         for i in range(1, len(ys)):
             valuedistance = lastys.iloc[i]['lasty'] - lastys.iloc[i - 1]['lasty']
             # Add padding if values are too close
-            if valuedistance < 250000:
-                lastys.at[lastys.iloc[i].name, 'ypad'] = 15 * padmultiplier
+            if valuedistance < 5000000:
+                lastys.at[lastys.iloc[i].name, 'ypad'] = 10 * padmultiplier
                 padmultiplier += 1
             else:
                 padmultiplier = 1
